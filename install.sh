@@ -211,6 +211,14 @@ tools(){
         cd ~/tools
     }
 
+    Crtsh(){
+        echo -e "${Green}Installing Crtsh.Py${NC}"
+        git clone https://github.com/YashGoti/crtsh.git
+        cd crtsh
+        pip3 install -r requirements.txt
+        cp crtsh.py /usr/local/bin/crtsh
+    }
+
     echo -e "${Green}Tools Installation Finished${NC}"
     chmod +x ./bugkill.sh
 }
