@@ -72,7 +72,7 @@ tools(){
     Aws-cli(){
         echo -e "${Green}Installing Aws-Cli${NC}"
         apt install -y awscli
-        echo "Don't forget to set up AWS credentials!"
+        echo -e "${Yellow}Don't forget to set up AWS credentials!${NC}"
         cd ~/tools
     }
 
@@ -85,7 +85,7 @@ tools(){
     }
 
     JSParser(){
-        echo "Installing JSParser"
+        echo -e "${Green}Installing JSParser${NC}"
         git clone https://github.com/nahamsec/JSParser.git
         cd JSParser
         sudo python setup.py install
@@ -93,7 +93,7 @@ tools(){
     }
 
     Sublist3r(){
-        echo "Installing Sublist3r"
+        echo -e "${Green}Installing Sublist3r${NC}"
         git clone https://github.com/aboul3la/Sublist3r.git
         cd Sublist3r
         pip install -r requirements.txt
@@ -101,13 +101,13 @@ tools(){
     }
     
     Teh_s3_bucketeers(){
-        echo "Installing teh_s3_bucketeers"
+        echo -e "${Green}Installing teh_s3_bucketeers${NC}"
         git clone https://github.com/tomdev/teh_s3_bucketeers.git
         cd ~/tools
     }
 
     Wpscan(){
-        echo "Installing Wpscan"
+        echo -e "${Green}Installing Wpscan${NC}"
         git clone https://github.com/wpscanteam/wpscan.git
         cd wpscan
         sudo gem install bundler
@@ -116,19 +116,19 @@ tools(){
     }
 
     Lazys3(){
-        echo "Installing lazys3"
+        echo -e "${Green}Installing lazys3${NC}"
         git clone https://github.com/nahamsec/lazys3.git
         cd ~/tools
     }
 
     Gobuter(){
-        echo "Installing Gobuster"
+        echo -e "${Green}Installing Gobuster${NC}"
         apt install -y gobuter
         cd ~/tools
     }
 
     Knock(){
-        echo "Installing knock"
+        echo -e "${Green}Installing knock${NC}"
         git clone https://github.com/guelfoweb/knock.git
         cd Knock
         pip3 install -r requirements.txt
@@ -136,13 +136,13 @@ tools(){
     }
 
     Nmap(){
-        echo "Intalling Nmap"
+        echo -e "${Green}Intalling Nmap${NC}"
         apt install -y nmap
         cd ~/tools
     }
 
     Massdns(){
-        echo "Installing massdns"
+        echo -e "${Green}Installing Massdns${NC}"
         git clone https://github.com/blechschmidt/massdns.git
         cd massdns
         make
@@ -150,7 +150,7 @@ tools(){
     }
 
     Asnlookup(){
-        echo "Installing asnlookup"
+        echo -e "${Green}Installing Asnlookup${NC}"
         git clone https://github.com/yassineaboukir/asnlookup.git
         cd asnlookup
         pip install -r requirements.txt
@@ -158,7 +158,7 @@ tools(){
     }
 
     Httprobe(){
-        echo "Installing Httprobe"
+        echo -e "${Green}Installing Httprobe${NC}"
         git clone https://github.com/tomnomnom/httprobe.git
         cd httprobe
         go build
@@ -166,7 +166,7 @@ tools(){
     }
 
     Unfurl(){
-        echo "Installing Unfurl"
+        echo -e "${Green}Installing Unfurl${NC}"
         git clone https://github.com/tomnomnom/unfurl.git
         cd unfurl
         go build
@@ -174,7 +174,7 @@ tools(){
     }
     
     Waybackurls(){
-        echo "Installing Waybackurls"
+        echo -e "${Green}Installing Waybackurls${NC}"
         git clone https://github.com/tomnomnom/waybackurls.git
         cd waybackurls
         go build
@@ -182,16 +182,18 @@ tools(){
     }
 
     Crtndstry(){
-        echo "Installing crtndstry"
+        echo -e "${Green}Installing crtndstry${NC}"
         git clone https://github.com/nahamsec/crtndstry.git
         echo "done"
         cd ~/tools
     }
 
     Seclists(){
-        echo "Installing Seclists"
+        echo -e "${Green}Installing Seclists${NC}"
         git clone https://github.com/danielmiessler/SecLists.git
         mv SecLists seclists
         cd ~/tools
     }
+
+    echo -e "${Green}Tools Installation Finished${NC}"
 }
