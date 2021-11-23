@@ -76,11 +76,25 @@ tools(){
         cd ~/tools
     }
 
+    Amass(){
+        echo -e "${Green}Installing Amass${NC}"
+        wget https://github.com/OWASP/Amass/releases/download/v3.15.0/amass_linux_amd64.zip
+        unzip amass_linux_amd64.zip
+        rm amass_linux_amd64.zip
+        mv amass_linux_amd64 amass
+        cd amass_linux_amd64
+        cp amass /usr/local/bin/amass
+        wget https://raw.githubusercontent.com/OWASP/Amass/master/examples/config.ini
+        echo -e "${Yellow}Don't forget to populate your amass config file in $pwd!${NC}"
+        cd ~/tools
+    }
+
     Aquatone(){
         echo -e "${Green}Installing Aquatone${NC}"
         git clone https://github.com/michenriksen/aquatone.git
         cd aquatone
         go build
+        cp aquatone /usr/local/bin/aquatone
         cd ~/tools
     }
 
@@ -162,6 +176,7 @@ tools(){
         git clone https://github.com/tomnomnom/httprobe.git
         cd httprobe
         go build
+        cp httprobe /usr/local/bin/httprobe
         cd ~/tools
     }
 
@@ -178,6 +193,7 @@ tools(){
         git clone https://github.com/tomnomnom/waybackurls.git
         cd waybackurls
         go build
+        cp waybackurls /usr/local/bin/waybackurls
         cd ~/tools
     }
 
@@ -196,4 +212,5 @@ tools(){
     }
 
     echo -e "${Green}Tools Installation Finished${NC}"
+    chmod +x ./bugkill.sh
 }
